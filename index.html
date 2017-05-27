@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" ng-app="checkEnglish">
+  <head>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <style>
+
+    </style>
+  </head>
+<body ng-controller="ctrlCheckEnglish">
+   <div class="container question" style="height:50px;">
+     {{displayQuestion}}
+   </div>
+   <div class="container answer">
+     <input class="form-control" type="text" name="" value="" ng-model="answer" ng-keyup="foo($event)">
+   </div>
+   <div class="">
+     {{result}}
+   </div>
+
+</body>
+</html>
