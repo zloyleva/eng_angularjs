@@ -69,7 +69,7 @@ $scope.vocab = [
   {"eng": "few","rus": "несколько, мало, немного", "trans":"fjuː"},
   {"eng": "He has but few chances of success","rus": "у него мало шансов на успех", "trans":""},
   {"eng": "few people are able to understand him","rus": "мало кто способен понять его", "trans":""},
-  {"eng": "I have a few friends in this town","rus": "В этом городе у меня есть несколько друзей", "trans":""},
+  {"eng": "I have a few friends in this city","rus": "В этом городе у меня есть несколько друзей", "trans":""},
   {"eng": "fire place","rus": "камин; очаг", "trans":"ˈfaɪər pleɪs"},
   {"eng": "for a few days","rus": "на несколько дней", "trans":""},
   {"eng": "he went away for a few days","rus": "он уехал на несколько дней", "trans":""},
