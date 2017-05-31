@@ -11,15 +11,27 @@
     </style>
   </head>
 <body ng-controller="ctrlCheckEnglish">
-   <div class="container question" style="height:50px;">
-     {{displayQuestion}}
-   </div>
-   <div class="container answer">
-     <input class="form-control" type="text" name="" value="" ng-model="answer" ng-keyup="foo($event)">
-   </div>
-   <div class="container куыгде">
-     {{result}}
-   </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sx-12">
+        <div class="question" style="min-height:50px;">
+          <p>To translate: {{displayQuestion}}</p>
+          <p ng-if="trans_status">Transcription: {{trans}}</p>
+        </div>
+        <div class="answer">
+          <input class="form-control" type="text" name="" value="" ng-model="answer" ng-keyup="foo($event)">
+        </div>
+        <div class="result">
+          {{result}}
+        </div>
+      </div>
+      <div class="col-sm-4 col-sx-12" >
+        <h4>Settings</h4>
+        <input type="checkbox" name="" value="" ng-model="trans_status" ng-init="trans_status = false"> I need transcription
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

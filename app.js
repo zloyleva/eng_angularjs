@@ -13,6 +13,7 @@
     $scope.answer = '';
     var randomNumber = 0;
     $scope.result = '';
+    $scope.trans = "";
 
     /**
     * Get words
@@ -33,6 +34,8 @@
         randomNumber = Math.floor(Math.random() * $scope.vocab.length);
         $scope.displayQuestion = $scope.vocab[randomNumber].rus;
         $scope.displayAnswer = $scope.vocab[randomNumber].eng;
+
+        $scope.trans = $scope.vocab[randomNumber].trans;
     }
 
     $scope.foo = function (event) {
