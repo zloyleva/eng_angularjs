@@ -16,6 +16,7 @@
     $scope.trans = "";
 
     $scope.vocab = [];
+    $scope.lesson_3 = false;
     $scope.lesson_4 = false;
     $scope.lesson_5 = false;
 
@@ -24,6 +25,12 @@
     */
     $scope.changeVocab = function () {
       $scope.vocab = [];
+      if($scope.lesson_3){
+        $http.get('words/lesson_3.json')
+          .then(function(data) {
+            $scope.vocab = data.data.concat($scope.vocab);
+          });
+      }
       if($scope.lesson_4){
         $http.get('words/lesson_4.json')
           .then(function(data) {
