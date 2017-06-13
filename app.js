@@ -19,6 +19,7 @@
     $scope.lesson_3 = false;
     $scope.lesson_4 = false;
     $scope.lesson_5 = false;
+    $scope.lesson_5_texts = false;
 
     /**
     * Get words
@@ -43,12 +44,15 @@
             $scope.vocab = data.data.concat($scope.vocab);
           });
       }
+
+      if($scope.lesson_5_texts){
+        $http.get('words/lesson_5_texts.json')
+          .then(function(data) {
+            $scope.vocab = data.data.concat($scope.vocab);
+          });
+      }
     }
 
-    // $http.get('words.json')
-    //   .then(function(data) {
-    //     $scope.vocab = data.data;
-    //   });
 
     // $scope.question =
     function checkInput() {
@@ -56,7 +60,7 @@
           if($scope.displayAnswer.toLowerCase() == $scope.answer.toLowerCase()){
             $scope.result = 'Correct';
           }else {
-            $scope.result = 'Wrong, correct: "' + $scope.displayAnswer + '". Tour answer: '+ $scope.answer;
+            $scope.result = 'Wrong, correct: "' + $scope.displayAnswer + '".\n Your answer: '+ $scope.answer;
           }
           randomNumber = Math.floor(Math.random() * $scope.vocab.length);
           $scope.displayQuestion = $scope.vocab[randomNumber].rus;

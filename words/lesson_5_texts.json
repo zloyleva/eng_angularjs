@@ -1,0 +1,12 @@
+[
+  {"eng": "A bad day at the office","rus": "Плохой день в офисе", "trans":""},
+  {"eng": "Mr. Blaine is the president of the Acme Insurance Company","rus": "Г-н Блейн является президентом страховой компании Acme", "trans":""},
+  {"eng": "His company is very large and busy","rus": "Его компания очень большая и занята", "trans":""},
+  {"eng": "Unfortunately, all of his employees are out today","rus": "К сожалению, сегодня все его сотрудники не на роботе", "trans":""},
+  {"eng": "Nobody is in the office","rus": "Никто в офисе", "trans":""},
+  {"eng": "As a result Mr. Blaine is doing everybody's job, and he's having a very bad day at the office","rus": "В результате г-н Блейн делает работу всех, и у него очень плохой день в офисе", "trans":""},
+  {"eng": "He's answering the telephone because his receptionist is at the dentist's office","rus": "Он отвечает на телефон, потому что его секретарша находится в кабинете дантиста", "trans":""},
+  {"eng": "He's typing a letter because his secretary is at home in bed with the flu","rus": "Он печатает письмо, потому что его секретарь дома в постели с гриппом", "trans":""},
+  {"eng": "He's operation the computer because computer programmer is on vacation","rus": "Он работает на компьютере, потому что программист в отпуске", "trans":""}
+
+]
