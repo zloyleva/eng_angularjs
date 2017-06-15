@@ -57,5 +57,6 @@
   {"eng": "suburban","rus": "пригородный, загородный", "trans":"səˈbɜːrbən"},
   {"eng": "superintendent","rus": "начальник, управляющий", "trans":"ˌsuːpərɪnˈtendənt"},
   {"eng": "swimming pool","rus": "плавательный бассейн", "trans":"ˈswɪmɪŋ puːl"},
-  {"eng": "to take care of","rus": "заботиться о чем-либо, ухаживать за", "trans":"ker"}
+  {"eng": "to take care of","rus": "заботиться о чем-либо, ухаживать за", "trans":"ker"},
+  {"eng": "care","rus": "заботиться о чем-либо, ухаживать за", "trans":"ker"},
 ]
