@@ -44,6 +44,12 @@
             $scope.vocab = data.data.concat($scope.vocab);
           });
       }
+      if($scope.lesson_6){
+          $http.get('words/lesson_6.json')
+              .then(function(data) {
+                  $scope.vocab = data.data.concat($scope.vocab);
+              });
+      }
 
       if($scope.lesson_5_texts){
         $http.get('words/lesson_5_texts.json')
