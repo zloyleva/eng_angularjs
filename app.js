@@ -15,64 +15,42 @@
     $scope.result = '';
     $scope.trans = "";
 
-    $scope.vocab = [];
-    $scope.lesson_3 = false;
-    $scope.lesson_4 = false;
-    $scope.lesson_5 = false;
-    $scope.lesson_5_texts = false;
+    $scope.dictionary = [];
 
-    /**
-    * Get words
-    */
-    $scope.changeVocab = function () {
-      $scope.vocab = [];
-      if($scope.lesson_3){
-        $http.get('words/lesson_3.json')
-          .then(function(data) {
-            $scope.vocab = data.data.concat($scope.vocab);
-          });
-      }
-      if($scope.lesson_4){
-        $http.get('words/lesson_4.json')
-          .then(function(data) {
-            $scope.vocab = data.data.concat($scope.vocab);
-          });
-      }
-      if($scope.lesson_5){
-        $http.get('words/lesson_5.json')
-          .then(function(data) {
-            $scope.vocab = data.data.concat($scope.vocab);
-          });
-      }
-      if($scope.lesson_6){
-          $http.get('words/lesson_6.json')
-              .then(function(data) {
-                  $scope.vocab = data.data.concat($scope.vocab);
-              });
-      }
+    $scope.lessons_words = [
+      {label: 'lesson_3', val: false},
+      {label: 'lesson_4', val: false},
+      {label: 'lesson_5', val: false},
+      {label: 'lesson_6', val: false}
+    ];
 
-      if($scope.lesson_5_texts){
-        $http.get('words/lesson_5_texts.json')
-          .then(function(data) {
-            $scope.vocab = data.data.concat($scope.vocab);
-          });
-      }
+    $scope.checkSelect = function () {
+      $scope.dictionary = [];// Clear dictionary
+      $scope.lessons_words.forEach(function (lesson) {
+        if(lesson.val){
+          var path = 'words/' + lesson.label + '.json';
+          $http.get(path)
+            .then(function(data) {
+              $scope.dictionary = data.data.concat($scope.dictionary);
+            });
+        }
+      });
     }
 
 
     // $scope.question =
     function checkInput() {
-        if($scope.vocab.length > 0){
+        if($scope.dictionary.length > 0){
           if($scope.displayAnswer.toLowerCase() == $scope.answer.toLowerCase()){
             $scope.result = 'Correct';
           }else {
             $scope.result = 'Wrong, correct: "' + $scope.displayAnswer + '".\n Your answer: '+ $scope.answer;
           }
-          randomNumber = Math.floor(Math.random() * $scope.vocab.length);
-          $scope.displayQuestion = $scope.vocab[randomNumber].rus;
-          $scope.displayAnswer = $scope.vocab[randomNumber].eng;
+          randomNumber = Math.floor(Math.random() * $scope.dictionary.length);
+          $scope.displayQuestion = $scope.dictionary[randomNumber].rus;
+          $scope.displayAnswer = $scope.dictionary[randomNumber].eng;
 
-          $scope.trans = $scope.vocab[randomNumber].trans;
+          $scope.trans = $scope.dictionary[randomNumber].trans;
         }
     }
 
